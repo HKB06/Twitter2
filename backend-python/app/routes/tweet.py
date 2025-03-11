@@ -10,7 +10,13 @@ router = APIRouter()
 
 @router.post("/tweets", response_model=Tweet)
 async def create_tweet(tweet: TweetCreate, current_user=Depends(get_current_user)):
-    tweet_data = {"content": tweet.content, "author_id": current_user.id, "author_username": current_user.username, "created_at": datetime.utcnow()}
+
+    tweet_data = {
+        "user_id": current_user.id,
+        "content": tweet.content,
+        "media_url": tweet.media_url if tweet.media_url else None,
+        "created_at": datetime.utcnow()
+    }
     result = db.tweets.insert_one(tweet_data)
     return Tweet(id=str(result.inserted_id), **tweet_data)
 
