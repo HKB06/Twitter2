@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
+from typing import Optional
 
 class CommentCreate(BaseModel):
     tweet_id: str
@@ -11,3 +12,4 @@ class Comment(BaseModel):
     user_id: str
     content: str
     created_at: datetime
+    updated_at: Optional[datetime] = None
