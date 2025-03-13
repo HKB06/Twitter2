@@ -171,7 +171,7 @@ export const getTweetById = async (tweetId: string) => {
  * Récupère le résumé des réactions émotionnelles pour un tweet
  */
 export const getTweetReactionsSummary = async (tweetId: string): Promise<EmotionReactionSummary> => {
-  const response = await fetch(`http://localhost:8000/api/tweets/${tweetId}/reactions/summary`);
+  const response = await fetch(`${API_URL}/api/tweets/${tweetId}/reactions/summary`);
   
   if (!response.ok) {
     throw new Error(`Erreur lors de la récupération des réactions: ${response.status}`);
@@ -184,7 +184,7 @@ export const getTweetReactionsSummary = async (tweetId: string): Promise<Emotion
  * Récupère toutes les réactions émotionnelles pour un tweet
  */
 export const getTweetReactions = async (tweetId: string): Promise<EmotionReaction[]> => {
-  const response = await fetch(`http://localhost:8000/api/tweets/${tweetId}/reactions`);
+  const response = await fetch(`${API_URL}/api/tweets/${tweetId}/reactions`);
   
   if (!response.ok) {
     throw new Error(`Erreur lors de la récupération des réactions: ${response.status}`);
@@ -201,7 +201,7 @@ export const addEmotionReaction = async (
   userId: string, 
   imageData: string
 ): Promise<EmotionReaction> => {
-  const response = await fetch(`http://localhost:8000/api/tweets/${tweetId}/reactions`, {
+  const response = await fetch(`${API_URL}/api/tweets/${tweetId}/reactions`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -423,7 +423,7 @@ export const getTrendingHashtags = async (limit: number = 10) => {
 
 export const toggleBookmark = async (tweetId: string) => {
   try {
-    const response = await fetch(`http://localhost:8000/tweets/${tweetId}/bookmark`, {
+    const response = await fetch(`${API_URL}/tweets/${tweetId}/bookmark`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -444,7 +444,7 @@ export const toggleBookmark = async (tweetId: string) => {
 
 export const checkBookmarkStatus = async (tweetId: string) => {
   try {
-    const response = await fetch(`http://localhost:8000/users/me/bookmarks`, {
+    const response = await fetch(`${API_URL}/users/me/bookmarks`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -465,7 +465,7 @@ export const checkBookmarkStatus = async (tweetId: string) => {
 
 export const getUserBookmarkedTweets = async () => {
   try {
-    const response = await fetch(`http://localhost:8000/users/me/bookmarks`, {
+    const response = await fetch(`${API_URL}/users/me/bookmarks`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
