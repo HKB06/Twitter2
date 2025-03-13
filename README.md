@@ -1,7 +1,5 @@
 # Twitter-Clone
-- Twitter-Clone est une application type Twitter où 
-- les utilisateurs publient des tweets, interagissent (likes, retweets, réponses) et 
-- bénéficient d’une IA analysant leurs expressions faciales (joie, tristesse, colère, etc.).
+Twitter-Clone est une application type Twitter où les utilisateurs publient des tweets, interagissent (likes, retweets, réponses) et bénéficient d’une IA analysant leurs expressions faciales (joie, tristesse, colère, etc.).
 
 ### Installation
 #### Prérequis
