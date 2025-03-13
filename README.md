@@ -10,8 +10,8 @@ Twitter-Clone est une application type Twitter où les utilisateurs publient des
 ## Backend Setup
 ```bash
 cd server
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+py -3 -m venv .venv
+source .venv/Scripts/activate  # if Powershell use `.venv\Scripts\activate`
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
