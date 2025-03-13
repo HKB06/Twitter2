@@ -1,42 +1,110 @@
-# Twitter-Clone
-Twitter-Clone est une application type Twitter où les utilisateurs publient des tweets, interagissent (likes, retweets, réponses) et bénéficient d’une IA analysant leurs expressions faciales (joie, tristesse, colère, etc.).
+# Twitter Clone Application
 
-## Installation
-#### Prérequis
-- Node.js
-- Python 3.x
-- MongoDB
+## Objectif
+Un clone de Twitter moderne développé avec Next.js 13 et FastAPI, mettant l'accent sur une expérience utilisateur fluide .
 
-## Backend Setup
+## Prérequis Techniques
+
+### Frontend
+- Node.js (version LTS recommandée)
+- npm ou yarn
+- Next.js 13
+- TypeScript
+- Tailwind CSS
+
+### Backend
+- Python 3.12
+- pip
+- FastAPI
+- uvicorn
+
+## Configuration du Frontend
+
+
+
+1. Cloner le projet :
 ```bash
-cd server
-py -3 -m venv .venv
-source .venv/Scripts/activate  # if Powershell use `.venv\Scripts\activate`
-pip install -r requirements.txt # or use docker `docker compose up -d`
-uvicorn app.main:app --reload
-```
-
-## Frontend Setup
-```bash
+git clone [URL_DU_REPO]
 cd client
+```
+2. Installer les dépendances :
+```bash
 npm install
+```
+3. Lancer le serveur de développement :
+```bash
 npm run dev
 ```
+4. Lancement du Front sur :
 
-## Utilisation
-Ouvrez l'interface dans votre navigateur à l'adresse http://localhost:3000
-
-## API Endpoints
-FastAPI Swagger UI http://localhost:8000/docs
-
-## Trello
-Trello le lien https://trello.com/b/4IJ92z25/mia28-hackathon
+* http://localhost:3000
 
 
-## Technologies Used
-### Frontend: 
-#### Next.js, React, Tailwind CSS
-### Backend: 
-#### FastAPI, MongoDB, Python 
-### Deployment
-#### Docker
+## Configuration du Backend
+
+1. Installer Python 3.12 :
+```bash
+# Vérifier la version
+python --version
+# Doit afficher Python 3.12.x
+```
+2. Créer et activer un environnement virtuel :
+
+```bash
+python -m venv venv
+# Windows
+.\venv\Scripts\activate
+# Unix/MacOS
+source venv/bin/activate
+```
+
+3. Installer les dépendances depuis requirements.txt :
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Lancer le serveur backend (deux options) : :
+
+```bash
+# Option 1
+py -3.11 main.py
+
+# Option 2
+py -3.11 -m uvicorn app.main:app --reload
+```
+Note : Si vous rencontrez des erreurs lors de l'installation :
+
+* Nettoyer le cache pip : pip cache purge 
+
+* Mettre à jour pip : python -m pip install --upgrade pip
+
+5. Lancement du Back sur :
+
+* http://localhost:8000
+
+
+## Fonctionnalités Implémentées
+ ### Frontend
+ * Authentification
+ * Mode jour/nuit
+ * Création de tweets
+ * Notifications
+ * Interface responsive
+### Backend
+ * API REST
+ * Authentification JWT
+ * Gestion des fichiers
+ * Détection d'émotions
+### Prochaines Étapes
+ * Tests unitaires
+ * Optimisation des performances
+ * WebSocket pour les notifications en temps réel
+
+### Déploiement
+ * Docker
+ 
+## Liens utiles
+
+* Trello le lien https://trello.com/b/4IJ92z25/mia28-hackathon
+
