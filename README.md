@@ -12,7 +12,7 @@ Twitter-Clone est une application type Twitter où les utilisateurs publient des
 cd server
 py -3 -m venv .venv
 source .venv/Scripts/activate  # if Powershell use `.venv\Scripts\activate`
-pip install -r requirements.txt
+pip install -r requirements.txt # or use docker `docker compose up -d`
 uvicorn app.main:app --reload
 ```
 
@@ -38,3 +38,5 @@ Trello le lien https://trello.com/b/4IJ92z25/mia28-hackathon)
 #### Next.js, React, Tailwind CSS
 ### Backend: 
 #### FastAPI, MongoDB, Python 
+### Deployment
+#### Docker
