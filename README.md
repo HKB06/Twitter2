@@ -24,13 +24,13 @@ npm run dev
 ```
 
 ## Utilisation
-Ouvrez l'interface dans votre navigateur à l'adresse http://localhost:3000.
+Ouvrez l'interface dans votre navigateur à l'adresse http://localhost:3000
 
 ## API Endpoints
-FastAPI Swagger UI http://localhost:8000/docs)
+FastAPI Swagger UI http://localhost:8000/docs
 
 ## Trello
-Trello le lien https://trello.com/b/4IJ92z25/mia28-hackathon)
+Trello le lien https://trello.com/b/4IJ92z25/mia28-hackathon
 
 
 ## Technologies Used
