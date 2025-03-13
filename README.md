@@ -64,7 +64,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Lancer le serveur backend (deux options) : :
+4. Lancer le serveur backend (deux options) : 
 
 ```bash
 # Option 1
@@ -82,6 +82,32 @@ Note : Si vous rencontrez des erreurs lors de l'installation :
 5. Lancement du Back sur :
 
 * http://localhost:8000
+
+
+## Déploiement avec Docker
+
+### Prérequis
+- Docker
+- Docker Compose
+
+### Commandes Docker
+
+1. Démarrer les services :
+```bash
+# Construire et démarrer les conteneurs
+docker-compose up --build
+
+# Démarrer en mode détaché (background)
+docker-compose up -d
+```
+2. Démarrer les services :
+```bash
+# Arrêter les conteneurs
+docker-compose down
+
+# Arrêter et supprimer les volumes
+docker-compose down -v
+```
 
 
 ## Fonctionnalités Implémentées
